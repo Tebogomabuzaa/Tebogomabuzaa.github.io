@@ -197,6 +197,7 @@
   .did li { position: relative; padding-left: 26px; max-width: 42em; }
   .did li::before { content: ""; position: absolute; left: 2px; top: 0.75em; width: 12px; height: 2px; background: var(--wine); }
   .did b { font-weight: 600; }
+  .did a { color: var(--wine); font-weight: 600; white-space: nowrap; }
   aside.facts-card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 22px; position: sticky; top: calc(env(safe-area-inset-top, 0px) + 80px); }
   aside.facts-card dl { margin: 0; display: grid; gap: 16px; }
   aside.facts-card dt { margin-bottom: 6px; }
@@ -753,9 +754,9 @@ Owner payout = net amount − (net amount × 12%)</code></div>
         </div>
         <h2 style="margin-top:32px">What I did</h2>
         <ul class="did">
-          <li><b>Designed and built a staff-management module:</b> four ASP.NET Web Forms pages over a layered C# data-access design. Every SQL statement lives in one repository class and uses parameterised queries (about 1,500 lines).</li>
-          <li><b>Wrote the module's relational schema:</b> a staff table plus department and role lookup tables, with unique constraints and scripts that can be run again safely. I also added server-side validation, including a check for duplicate emails.</li>
-          <li><b>Caught an integration problem early.</b> My module targeted Azure SQL, but the team had standardised on SQLite. I pulled it off the shared branch that afternoon and resubmitted it as pull request #3 for team review.</li>
+          <li><b>Wrote 2,100+ lines of code for a staff-management module</b> in C#, ASP.NET Web Forms and SQL: add, update, delete and directory pages, plus a database helper, an <code class="mono">Employee</code> model and an <code class="mono">EmployeeRepository</code> class that holds every SQL statement as a parameterised query. <a href="https://github.com/TiagoMartins300905/AQUACORE_CMPG223_2026/commit/bc386dd46fb3978ca80e57a1e3bb4b3f76fdca6f" target="_blank" rel="noopener">View the commit ↗</a></li>
+          <li><b>Wrote the module's relational schema:</b> an employees table plus department and role lookup tables, with unique constraints and scripts that can be run again safely. I also added server-side validation, including a check for duplicate emails.</li>
+          <li><b>Caught an integration problem early.</b> My module targeted Azure SQL, but the team had standardised on SQLite. I pulled it off the shared branch that afternoon so nobody else's work broke, then reworked the forms and resubmitted them for review. <a href="https://github.com/TiagoMartins300905/AQUACORE_CMPG223_2026/pull/3" target="_blank" rel="noopener">View pull request #3 ↗</a> The team went on to use a teammate's version of the staff pages in the final build.</li>
           <li><b>Compiled the group's final technical documentation:</b> the 3NF data model and ER diagram, use-case and data flow models, the full SQL inventory, report definitions, a user manual covering every role, and a diary of time spent drawn from the commit history.</li>
         </ul>
         <div class="extra">
@@ -771,7 +772,7 @@ Owner payout = net amount − (net amount × 12%)</code></div>
       </div>
       <aside class="facts-card">
         <dl>
-          <div><dt class="label">Role</dt><dd>Staff-management module, technical documentation</dd></div>
+          <div><dt class="label">Role</dt><dd>Developer (staff-management module), technical documentation</dd></div>
           <div><dt class="label">Team</dt><dd>8 people</dd></div>
           <div><dt class="label">Module</dt><dd>CMPG223 · Systems Analysis and Design II</dd></div>
           <div><dt class="label">Timeline</dt><dd>August – September 2026</dd></div>
